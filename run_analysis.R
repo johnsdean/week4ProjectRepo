@@ -37,4 +37,5 @@ tidy_df <- rename(tidy_df, activity=activity_code)
 
 tidy_group <- group_by(tidy_df, volunteer, activity)
 tidy_smartphoneActivities <- summarize_all(tidy_group, list(mean=mean))
-write.table(tidy_smartphoneActivities, "tidy_smartphoneActivities.txt")
+write.table(tidy_smartphoneActivities, "tidy_smartphoneActivities.txt",
+  row.names=FALSE)
